@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.GestionarPerfil"
+             Title="Gestionar Perfil"
+             BackgroundColor="#854DAB">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Frame BackgroundColor="Transparent"  CornerRadius="50" WidthRequest="10" HeightRequest="100" Margin="153,-10,153,-10" Padding="0">
+                <Image x:Name="imgPerfil" Aspect="AspectFill" HeightRequest="30"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Margin="20,0,0,0">
+                    <Label Text="Seleccionar foto" TextColor="Black"/>
+                    <ImageButton Source="clip.png" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="1" x:Name="btnSeleccionar" Clicked="btnSeleccionar_Clicked" WidthRequest="30" HeightRequest="40" Margin="30,0,50,0"/>
+                </StackLayout>
+            </StackLayout>
+            <Frame HeightRequest="60" Padding="15,10,15,15" BorderColor="White" BackgroundColor="#854DAB">
+                <StackLayout>
+                <Label Text="Nombres" TextColor="Wheat" FontAttributes="Bold"/>
+                <Entry x:Name="txtNombre" Placeholder="Nombre" />
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="60" Padding="15,10,15,15" BackgroundColor="#854DAB" BorderColor="White">
+                <StackLayout>
+                    <Label Text="Apellidos" TextColor="Wheat" FontAttributes="Bold"/>
+                <Entry x:Name="txtApellido" Placeholder="Apellidos" />
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="60" Padding="15,10,15,15" BackgroundColor="#854DAB" BorderColor="White">
+                <StackLayout>
+                <Label Text="Correo Electronico" TextColor="Wheat" FontAttributes="Bold"/>
+                <Entry x:Name="txtCorreo" Placeholder="Correo Electronico" IsEnabled="False" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="60" Padding="15,10,15,15" BackgroundColor="#854DAB" BorderColor="White">
+                <StackLayout>
+                <Label Text="Nueva Contraseña" TextColor="Wheat" FontAttributes="Bold"/>
+                <Entry x:Name="txtContra" Placeholder="Contraseña" IsPassword="True" />
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="60" Padding="15,10,15,15" BackgroundColor="#854DAB" BorderColor="White">
+                <StackLayout>
+                <Label Text="Confirmar Contraseña" TextColor="Wheat" FontAttributes="Bold"/>
+                <Entry x:Name="txtConfirContra" Placeholder="Confirmar Contraseña" IsPassword="True" />
+                </StackLayout>
+            </Frame>
+            <BoxView HeightRequest="30"/>
+            <Button x:Name="btnActualizar" Text="Actualizar perfil" Clicked="btnActualizar_Clicked" CornerRadius="10" BackgroundColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.MostrarUsuario">
+    <ContentPage.ToolbarItems>
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="listado" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Blue" Margin="20" >
+            <ListView.Header>
+                <StackLayout>
+                    <Label Text="Lista de contactos" FontSize="Large" HorizontalOptions="Center" TextColor="Blue" >
+                    </Label>
+                    <Label Text="BD SQlite" FontSize="Large" HorizontalOptions="Center" TextColor="Blue" >
+                    </Label>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem x:Name="BtnEditar" Text="Editar"
+                                      
+                                      CommandParameter="{Binding .}">
+                            </MenuItem>
+                            <MenuItem x:Name="BtnEliminar" Text="Eliminar" IsDestructive="True"
+                                      
+                                      CommandParameter="{Binding .}">
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        <Frame CornerRadius="5" 
+                                   BorderColor="Gray"
+                                   Padding="8" IsClippedToBounds="False"
+                                   Margin="10,10,10,10"
+                               HasShadow="False"
+                                   >
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition ></RowDefinition>
+                                    <RowDefinition ></RowDefinition>
+                                    <RowDefinition ></RowDefinition>
+                                    <RowDefinition ></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0" Text="ID" />
+                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding id_usuario}" FontSize="Medium" ></Label>
+
+                                <Label Grid.Column="0" Grid.Row="1" Text="Nombres" />
+                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding nom_usuario}" FontSize="Medium" />
+
+                                <Label Grid.Column="0" Grid.Row="2" Text="Apellidos" />
+                                <Label Grid.Column="1" Grid.Row="2" Text="{Binding ape_usuario}" FontSize="Medium" />
+
+                                <Label Grid.Column="0" Grid.Row="3" Text="Correo" />
+                                <Label Grid.Column="1" Grid.Row="3" Text="{Binding correo}" FontSize="Medium" />
+                                
+                                <Label Grid.Column="0" Grid.Row="4" Text="Contraseña" />
+                                <Label Grid.Column="1" Grid.Row="4" Text="{Binding contra}" FontSize="Medium" />
+                                
+                                <Label Grid.Column="0" Grid.Row="5" Text="Foto" />
+                                <Label Grid.Column="1" Grid.Row="5" Text="{Binding foto_usuario}" FontSize="Medium" />
+                                
+                                <Label Grid.Column="0" Grid.Row="6" Text="sesion" />
+                                <Label Grid.Column="1" Grid.Row="6" Text="{Binding sesion}" FontSize="Medium" />
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

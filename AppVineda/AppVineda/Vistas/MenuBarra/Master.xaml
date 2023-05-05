@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.MenuBarra.Master"
+             Title="MASTER">
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="#00355B">
+            <Frame BackgroundColor="#FF3149">
+                <Label Text="Menú" HorizontalOptions="Start" FontSize="20" TextColor="White" FontAttributes="Bold"/>
+            </Frame>
+            <Frame HeightRequest="70" BackgroundColor="#00355B">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="8"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" CornerRadius="80" Margin="-15" >
+                        <Image x:Name="imgPerfil" Aspect="AspectFill" Grid.RowSpan="3" Margin="-40,-40,-40,-40"  HeightRequest="50" WidthRequest="50"/>
+                    </Frame>
+                    <Label x:Name="txtNombre" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" TextColor="White" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" Margin="40,-30,0,0"/>
+                </Grid>
+            </Frame>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <Frame x:Name="frmOpciones" BackgroundColor="#00355B" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto" x:Name="optionsRow"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnCategoria" Text="Categorias" Clicked="btnOpciones_Clicked" BackgroundColor="#00355B" TextColor="White"  FontAttributes="Bold"/>
+                    <StackLayout Grid.Row="1" x:Name="options" IsVisible="False">
+                        <BoxView HeightRequest="1" BackgroundColor="White" Margin="-20,0,-20,0"/>
+                        <Button x:Name="btnOpcion1" Clicked="btnOpcion1_Clicked" Text="Peces" BackgroundColor="#001121" TextColor="White" FontAttributes="Bold" Margin="-20,-5,-20,-5"/>
+                        <BoxView HeightRequest="1" BackgroundColor="White" Margin="-20,0,-20,0"/>
+                        <Button x:Name="btnOpcion2" Clicked="btnOpcion2_Clicked" Text="Alimentos" BackgroundColor="#001121" TextColor="White" FontAttributes="Bold" Margin="-20,-5,-20,-5"/>
+                        <BoxView HeightRequest="1" BackgroundColor="White" Margin="-20,0,-20,0"/>
+                        <Button x:Name="btnOpcion3" Clicked="btnOpcion3_Clicked" Text="Acuarios" BackgroundColor="#001121" TextColor="White" FontAttributes="Bold" Margin="-20,-5,-20,-5"/>
+                        <BoxView HeightRequest="1" BackgroundColor="White" Margin="-20,0,-20,0"/>
+                        <Button x:Name="btnOpcion4" Clicked="btnOpcion4_Clicked" Text="Accesorios" BackgroundColor="#001121" TextColor="White" FontAttributes="Bold" Margin="-20,-5,-20,-5"/>
+                        <BoxView HeightRequest="1" BackgroundColor="White" Margin="-20,0,-20,0"/>
+                        <Button x:Name="btnOpcion5" Clicked="btnOpcion5_Clicked" Text="Limpieza y cuidado" BackgroundColor="#001121" TextColor="White" FontAttributes="Bold" Margin="-20,-5,-20,-5"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <Frame HeightRequest="50"  BackgroundColor="#00355B">
+                <Button x:Name="btnHistorial" Clicked="btnHistorial_Clicked" Text="Historial de Compras" BackgroundColor="#00355B"  TextColor="White" FontAttributes="Bold"/>
+            </Frame>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <Frame  BackgroundColor="#00355B">
+                <Button x:Name="btnTienda" Clicked="btnTienda_Clicked" Text="Tienda Fisica" BackgroundColor="#00355B"  TextColor="White" FontAttributes="Bold"/>
+            </Frame>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <Frame  BackgroundColor="#00355B">
+                <Button x:Name="btnAcercaNosotros" Clicked="btnAcercaNosotros_Clicked" Text="Acerca de Nosotros" BackgroundColor="#00355B"  TextColor="White" FontAttributes="Bold"/>
+            </Frame>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <Frame  BackgroundColor="#00355B">
+                <Button x:Name="btnAyudda" Text="Ayuda" Clicked="btnAyudda_Clicked" BackgroundColor="#00355B"  TextColor="White" FontAttributes="Bold"/>
+            </Frame>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <ImageButton Source="salir.png" BackgroundColor="Transparent" HeightRequest="31" HorizontalOptions="End" x:Name="btnSalir" Clicked="btnSalir_Clicked" Margin="0,5,20,-18"/>
+            <ImageButton Source="configuracion.png" BackgroundColor="Transparent" HeightRequest="31" HorizontalOptions="Start" x:Name="btnConfig" Clicked="btnConfig_Clicked" Margin="20,-15,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

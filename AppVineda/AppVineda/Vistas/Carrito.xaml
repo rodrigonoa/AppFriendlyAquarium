@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.Carrito"
+             Title="Mi Carrito"
+             BackgroundColor="CadetBlue"
+             IconImageSource="carritocompra.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listaProductos" RowHeight="200">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem x:Name="BtnEliminar" IconImageSource="eliminar.png" Text="Eliminar" IsDestructive="True"
+                                      Clicked="btnEliminar_Clicked" CommandParameter="{Binding .}">
+                                </MenuItem>
+                            </ViewCell.ContextActions>
+                            <Frame Padding="1" CornerRadius="10">
+                            <StackLayout Orientation="Vertical" BackgroundColor="Black">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5"/>
+                                        <ColumnDefinition Width="130"/>
+                                        <ColumnDefinition Width="5"/>
+                                        <ColumnDefinition Width="70"/>
+                                        <ColumnDefinition Width="155"/>
+                                        <ColumnDefinition Width="10"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="5"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="{Binding ImagenCar}" x:Name="imgPro" Grid.Row="1" BackgroundColor="Transparent" HeightRequest="90" Grid.RowSpan="6"  Grid.Column="1" HorizontalOptions="Center" Margin="0,0,0,0" />
+                                    <Label Text="Nombre :" Grid.Row="2" Grid.Column="3" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="{Binding NombreCar}" Grid.Row="2" Grid.Column="4" HorizontalOptions="Start" HorizontalTextAlignment="Start" TextColor="Wheat"/>
+                                    <Label Text="Precio :" Grid.Row="3" Grid.Column="3" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="{Binding PrecioCar,StringFormat='S/. {0:#,0.00}'}" Grid.Row="3" Grid.Column="4" HorizontalOptions="Start" TextColor="Wheat"/>
+                                    <Label Text="Cantidad :" Grid.Row="4" Grid.Column="3" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Cantidad}" Grid.Row="4" Grid.Column="4" HorizontalOptions="Start" TextColor="Wheat"/>
+                                    <Label Text="Total :" Grid.Row="5" Grid.Column="3" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Total,StringFormat='S/. {0:#,0.00}'}" Grid.Row="5" Grid.Column="4" HorizontalOptions="Start" TextColor="Wheat"/>
+                                </Grid>
+                            </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Frame x:Name="miframe" BackgroundColor="White" HeightRequest="40">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="2"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Pagar" x:Name="btnPagar" Grid.Column="1" Grid.Row="0" Clicked="btnPagar_Clicked" HeightRequest="40" CornerRadius="20" BackgroundColor="Blue" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+                <Label x:Name="txtSumTotal" Margin="20,0,0,0" TextColor="Black" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+            </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

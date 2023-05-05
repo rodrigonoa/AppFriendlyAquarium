@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             NavigationPage.HasNavigationBar="False"
+                x:Class="AppVineda.MainPage"
+              BackgroundImageSource="fondodifuminado.jpg">
+
+    <StackLayout>
+        <Grid>
+            <StackLayout Padding="30,100,30,0" Margin="0" HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="100" BackgroundColor="Transparent" Padding="0" Margin="0">
+                    <Image Aspect="AspectFill" Margin="0" Source="logofriendly.png"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="0" Margin="10,200,10,0" HorizontalOptions="FillAndExpand">
+                <Frame BackgroundColor="Transparent" CornerRadius="30" HeightRequest="500" HasShadow="True" Padding="0">
+
+                    <StackLayout>
+
+
+                        <StackLayout Margin="25">
+                            <Label Text="" FontFamily="italic" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="#B8AFA6" BorderColor="DarkGray"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry Placeholder="Email" x:Name="txtEmail" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" PlaceholderColor="White"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="#B8AFA6" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry Placeholder="Password" x:Name="txtContra" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" PlaceholderColor="White"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <StackLayout  Orientation="Horizontal">
+                                <CheckBox IsChecked="False" Color="White" />
+                                <Label Text="Recordarme" TextColor="White" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                                <Label Text="Olvidaste tu contraseña" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+
+                            </StackLayout>
+
+                            <Button Text="INGRESAR" x:Name="btnLogin" Clicked="Button_Clicked" BackgroundColor="Transparent" TextColor="White" CornerRadius="30" BorderColor="White" BorderWidth="2"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Frame HeightRequest="45" WidthRequest="405"  HasShadow="False" BorderColor="Transparent" Margin="0" HorizontalOptions="Center" Padding="0" BackgroundColor="Transparent">
+                                    <Button x:Name="btnRegister" Text="Registrarse" Clicked="btnRegister_Clicked" Margin="0" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" TextColor="White" CornerRadius="30"/>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

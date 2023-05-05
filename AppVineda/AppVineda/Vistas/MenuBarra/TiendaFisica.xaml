@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.MenuBarra.TiendaFisica"
+             Title="Tienda Física">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="50,0,0,0" Padding="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="150"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="22"></RowDefinition>
+                        <RowDefinition Height="22"></RowDefinition>
+                        <RowDefinition Height="22"></RowDefinition>
+                        <RowDefinition Height="22"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="200"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Padding="45,20,10,0" FontSize="25"/>
+                    <Image Source="logofriendly" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="Datos Generales" Grid.Row="2" Grid.Column="0" FontSize="20" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="Razón social: Friendly Aquarium S.A.C." Grid.Row="3" Grid.Column="0" FontSize="17" TextColor="black"/>
+                    <Label Text="Dirección: Av. Las Gardenias de Gloria Grande 1ra Etapa, Miraflores LIMA PERU" Grid.Row="4" Grid.Column="0" FontSize="17" TextColor="black"/>
+                    <Label Text="Ruc: 10520188238" Grid.Row="5" Grid.Column="0" FontSize="17" TextColor="black"/>
+                    <Label Text="Teléfono: 901223987" Grid.Row="6" Grid.Column="0" FontSize="17" TextColor="black"/>
+                    <Label Text="Correo: friendlyaquarium@gmail.com" Grid.Row="7" Grid.Column="0" FontSize="17" TextColor="black"/>
+                    <Label Text="Foto de la tienda fisica" Grid.Row="9" Grid.Column="0" FontSize="20" Padding="60,0,0,0" TextColor="black" FontAttributes="Bold"/>
+                    <Image Source="tiendafisica" Grid.Row="10" Grid.Column="0" HeightRequest="200"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ImageButton Source="facebook" BackgroundColor="White"  x:Name="btnFacebook" Clicked="btnFacebook_Clicked" HeightRequest="50" HorizontalOptions="Start" Grid.Row="0" Grid.Column="1"/>
+                    <ImageButton Source="instagram" BackgroundColor="White" x:Name="btnInstagram" Clicked="btnInstagram_Clicked" HeightRequest="50" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3"/>
+                    <ImageButton Source="twitter" BackgroundColor="White" x:Name="btnTwitter" Clicked="btnTwitter_Clicked" HeightRequest="50" HorizontalOptions="End" Grid.Row="0" Grid.Column="5"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

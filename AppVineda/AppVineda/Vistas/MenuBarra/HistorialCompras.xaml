@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.MenuBarra.HistorialCompras"
+             Title="Historial de Compras"
+             BackgroundColor="white">
+    <AbsoluteLayout>
+        <CarouselView x:Name="carouselView1" 
+                      AbsoluteLayout.LayoutBounds="0,0,1,1"
+                      AbsoluteLayout.LayoutFlags="All"
+                      PeekAreaInsets="50"
+                      Loop="False">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Vertical"
+                    SnapPointsAlignment="Center"
+                    SnapPointsType="MandatorySingle"/>
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <AbsoluteLayout>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="CurrentItem">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="MyLabel" Property="Label.TextColor" Value="Black"/>
+                                        <Setter TargetName="MyLabel" Property="Label.FontAttributes" Value="Bold"/>
+                                        <Setter TargetName="MyLabel" Property="Label.FontSize" Value="20"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PreviousItem">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="MyLabel" Property="Label.TextColor" Value="Black"/>
+                                        <Setter TargetName="MyLabel" Property="Label.FontAttributes" Value="Bold"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="NextItem">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="MyLabel" Property="Label.TextColor" Value="Black"/>
+                                        <Setter TargetName="MyLabel" Property="Label.FontAttributes" Value="Bold"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="DefaultItem">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="MyLabel" Property="Label.TextColor" Value="Black"/>
+                                        <Setter TargetName="MyLabel" Property="Label.FontAttributes" Value="Bold"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Frame BorderColor="Black" CornerRadius="30" Margin="25,0,25,0" BackgroundColor="SandyBrown">
+                        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.3,Autosize,Autosize" AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalOptions="Center">
+                            <Label x:Name="MyLabel" Text="{Binding NombrePro}" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                            <Image Source="{Binding ImagenPro}" HeightRequest="210" HorizontalOptions="Center" VerticalOptions="Start" Aspect="AspectFit" BackgroundColor="Transparent"/>
+                            <Label Text="Precio :" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"/>
+                            <Label x:Name="MyText1" Text="{Binding PrecioPro, StringFormat='S/. {0:#,0.00}'}" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                            <Label Text="Cantidad :" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"/>
+                            <Label x:Name="MyText2" Text="{Binding CantidadPro}" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                            <Label Text="Total :" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"/>
+                            <Label x:Name="MyText3" Text="{Binding TotalPro, StringFormat='S/. {0:#,0.00}'}" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                            <Label Text="Fecha y Hora de Pago :" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"/>
+                            <Label x:Name="MyText4" Text="{Binding FechaHora}" HorizontalOptions="Center" VerticalOptions="Start" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </StackLayout>
+                        </Frame>
+                    </AbsoluteLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorview" IsVisible="false" Position="0" AbsoluteLayout.LayoutBounds="0.5,0.95,100,100" AbsoluteLayout.LayoutFlags="PositionProportional" IndicatorSize="10" SelectedIndicatorColor="Black"/>
+    </AbsoluteLayout>
+</ContentPage>

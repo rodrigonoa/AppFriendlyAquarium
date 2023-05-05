@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.MenuBarra.AcercaNosotros"
+             BackgroundColor="#F2AB1C"
+             Title="Acerca de Nosotros">
+    <ContentPage.ToolbarItems>
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="30,10,30,0" Padding="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="90"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="42"></RowDefinition>
+                        <RowDefinition Height="60"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="120"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="260"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="200"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Text="" Grid.Row="0" Grid.Column="0" Padding="45,20,10,0" FontSize="25"/>
+                    <Image Source="logofriendly" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="Autor" Grid.Row="3" Grid.Column="0" FontSize="24" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="Rodrigo Gabriel Noa Pimentel" Grid.Row="4" Grid.Column="0" FontSize="20" TextColor="black"/>
+                    <Label Text="Acerca de Nosotros" Grid.Row="5" Grid.Column="0" FontSize="24" TextColor="black" FontAttributes="Bold"/>
+                    <Label Grid.Row="6" Grid.Column="0" FontSize="17" TextColor="Black">
+                        En 2021, fundamos nuestra tienda física con el objetivo de ofrecer productos de alta calidad y un servicio excepcional a nuestros clientes. 
+                    </Label>
+                    <Label Grid.Row="8" Grid.Column="0" FontSize="17" TextColor="Black">
+                        Sin embargo, no queríamos quedarnos solo en eso, así que para innovar y estar a la vanguardia de la tecnología, nos propusimos crear tanto una aplicación web como una aplicación móvil para facilitar aún más la experiencia de compra a nuestros clientes.</Label>
+                    <Label Grid.Row="10" Grid.Column="0" FontSize="17" TextColor="Black">
+                        Nuestra tienda se especializa en productos para peces, desde peceras hasta artículos de decoración y limpieza, siempre buscando la máxima calidad y diseño.</Label>
+                    <Label Grid.Row="12" Grid.Column="0" FontSize="17" TextColor="Black">
+                        Nos aseguramos de ofrecer una amplia variedad de productos para satisfacer las necesidades y gustos de todos nuestros clientes.En nuestra tienda, nos esforzamos por brindar un servicio excepcional a cada uno de nuestros clientes. Nuestro equipo está altamente 
+                        capacitado y comprometido a brindar una experiencia de compra cómoda y sin problemas. Además, siempre estamos buscando maneras de mejorar
+                        y adaptarnos a las necesidades de nuestros clientes.Estamos muy orgullosos de nuestra tienda y de lo que hemos logrado hasta ahora.</Label>
+                    <Label Grid.Row="14" Grid.Column="0" FontSize="17" TextColor="Black">Esperamos seguir innovando y mejorando para seguir siendo la opción número uno para productos para el hogar. ¡Gracias por elegirnos!</Label>
+                    <Label Text="Video de la funcion de nuestra aplicación" Grid.Row="16" Grid.Column="0" FontSize="19" TextColor="Black" FontAttributes="Bold"/>
+                    <WebView HeightRequest="200" Grid.Row="18" Grid.Column="0" x:Name="web_video"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.ProcesoCompra"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#A49ECE">
+    <ContentPage.Content BackgroundColor="#A49ECE">
+        <ScrollView>
+            <Grid RowDefinitions="4*, 8*">
+                <Frame BackgroundColor="#A49ECE" Padding="0,70,0,0" Grid.Row="0">
+                    <StackLayout Margin="0,-100,0,0">
+                        <CheckBox x:Name="btnMegusta" CheckedChanged="btnMegusta_CheckedChanged" Color="White"  HorizontalOptions="End" HeightRequest="30" WidthRequest="35" Margin="0,70,20,14"/>
+                        <ImageButton x:Name="btnVolver" Clicked="btnVolver_Clicked" Source="flechablanca" BackgroundColor="Transparent" WidthRequest="25" HeightRequest="45" HorizontalOptions="Start" Margin="20,-55,0,0"/>
+                        <Image x:Name="imgProducto" WidthRequest="100" HeightRequest="170" VerticalOptions="Start" Margin="0,-10,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="70" BackgroundColor="#F3F3FB" Margin="0,0,0,-60" Padding="0,0,0,0" Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="170"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblNombre" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" FontSize="18" FontAttributes="Bold" HorizontalOptions="Start"/>
+                        <Label x:Name="lblPrecio" Grid.Row="1" Grid.Column="3" TextColor="Blue" Grid.ColumnSpan="2" Margin="-20,0,0,0" HorizontalOptions="Center" BackgroundColor="Transparent" FontSize="18"/>
+                        <Frame Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="-15,0,0,-30" CornerRadius="20" BackgroundColor="LightBlue">
+                            <StackLayout>
+                                <Label Text="Descripción:" HorizontalOptions="Start" BackgroundColor="Transparent" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+                                <Label x:Name="lblDescripcion" BackgroundColor="Transparent" TextColor="Black" FontSize="18" FontAttributes="Italic"/>
+                            </StackLayout>
+                        </Frame>
+                        <ImageButton x:Name="btnMenos" Clicked="btnMenos_Clicked" Source="flechaizquierda.png" Grid.Row="6" Grid.Column="1" BackgroundColor="Transparent" Margin="-15,0,0,0"/>
+                        <ImageButton x:Name="btnMas" Clicked="btnMas_Clicked" Source="flechaderecha.png" Grid.Row="6" Grid.Column="4" BackgroundColor="Transparent" Margin="-15,0,0,0"/>
+                        <Label x:Name="txtCantidad" Text="0" Margin="20,0,0,0" Grid.Row="6" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontSize="20" />
+                        <Frame Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" CornerRadius="30" BackgroundColor="DarkOrange" Margin="0,-30,0,-10">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="0"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="60"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="txtTotal" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start" Grid.ColumnSpan="1" TextColor="White" FontAttributes="Bold" FontSize="18"/>
+                                    <Button x:Name="btnCarrito" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" Grid.ColumnSpan="2" Clicked="btnCarrito_Clicked" Text="Añadir al carrito" BackgroundColor="White" FontAttributes="Bold" FontSize="12" TextColor="Black" CornerRadius="20"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

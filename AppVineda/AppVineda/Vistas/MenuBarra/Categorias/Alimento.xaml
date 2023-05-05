@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVineda.Vistas.MenuBarra.Categorias.Alimento"
+             Title="Alimentos">
+    <Frame Padding="0" BackgroundColor="#00B6F6">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="600"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <CarouselView Grid.Row="1" x:Name="carouselView1" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,0,20,0" BackgroundColor="Transparent">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame Padding="0" BackgroundColor="#FFAF00" CornerRadius="30">
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="5"/>
+                                            <ColumnDefinition Width="350"/>
+                                            <ColumnDefinition Width="5"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="60" />
+                                            <RowDefinition Height="90" />
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="40" />
+                                        </Grid.RowDefinitions>
+                                        <Image Source="logofriendly.png" Grid.Row="1" Grid.Column="1" HorizontalOptions="End" Margin="5"/>
+                                        <ImageButton x:Name="btnImagen1" Source="{Binding Imagen}" Clicked="btnImagen1_Clicked" CommandParameter="{Binding Id}" BackgroundColor="Transparent" HeightRequest="200" Padding="20" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1"/>
+                                        <Label Text="{Binding Precio,StringFormat='S/. {0:#,0.00}'}" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1" FontSize="35" TextColor="White" FontAttributes="Bold"/>
+                                        <BoxView BackgroundColor="White" Grid.Row="4" Grid.Column="1" Grid.RowSpan="3" Margin="-10"/>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="White" HeightRequest="200" Margin="0,-50,0,30" CornerRadius="30">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5"/>
+                                        <ColumnDefinition Width="350"/>
+                                        <ColumnDefinition Width="5"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5"/>
+                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="135" />
+                                        <RowDefinition Height="150" />
+                                        <RowDefinition Height="40" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Nombre}" HorizontalOptions="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" TextColor="Black" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center" Margin="-30,-15,0,-10"/>
+                                    <Label Text="{Binding Descripcion}" Grid.Row="2" Grid.Column="1" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Start" Margin="-10,0,10,0" FontSize="19" />
+
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </Grid>
+    </Frame>
+</ContentPage>
